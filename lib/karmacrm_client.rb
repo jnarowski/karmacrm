@@ -1,2 +1,3 @@
-require "karmacrm_client/base"
 require "karmacrm_client/version"
+require "karmacrm_client/note"
+require "karmacrm_client/company"

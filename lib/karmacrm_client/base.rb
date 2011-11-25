@@ -10,6 +10,14 @@ module KarmacrmClient
       @@api_key ||= ""
     end
 
+    def self.format
+      @@format ||= ActiveResource::Formats::JsonFormat
+    end
+
+    def self.config
+      yield self
+    end
+    
     def self.find(*args)
       scope = args.slice!(0)
       options = args.slice!(0) || {}
