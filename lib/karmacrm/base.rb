@@ -1,6 +1,6 @@
 require "active_resource"
 
-module KarmacrmClient
+module Karmacrm
   class Base < ActiveResource::Base
 
     class << self

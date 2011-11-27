@@ -1,7 +1,7 @@
 require "test/test_helper"
-require "karmacrm_client/company"
+require "karmacrm/company"
 
-module KarmacrmClient
+module Karmacrm
   class CompanyTest < Test::Unit::TestCase
     def setup
     end

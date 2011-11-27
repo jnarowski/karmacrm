@@ -1,7 +1,7 @@
 require "test_helper"
-require "karmacrm_client/lead"
+require "karmacrm/lead"
 
-module KarmacrmClient
+module KarmacrmC
   class LeadTest < Test::Unit::TestCase
     def test_create
       all = Lead.find(:all)

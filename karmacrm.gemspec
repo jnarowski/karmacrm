@@ -1,17 +1,15 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "karmacrm_client/version"
+require "karmacrm/version"
 
 Gem::Specification.new do |s|
-  s.name        = "karmacrm_client"
-  s.version     = KarmacrmClient::VERSION
+  s.name        = "karmacrm"
+  s.version     = Karmacrm::VERSION
   s.authors     = ["Bosko Ivanisevic"]
   s.email       = ["bosko.ivanisevic@gmail.com"]
   s.homepage    = ""
   s.summary     = %q{KarmaCRM client library}
   s.description = %q{KarmaCRM API client library}
-
-  s.rubyforge_project = "karmacrm_client"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

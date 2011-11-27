@@ -1,0 +1,6 @@
+require "karmacrm/version"
+require "karmacrm/base"
+require "karmacrm/note"
+require "karmacrm/company"
+require "karmacrm/user"
+require "karmacrm/lead"

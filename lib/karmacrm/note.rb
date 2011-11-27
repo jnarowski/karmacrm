@@ -1,4 +1,4 @@
-module KarmacrmClient
+module Karmacrm
   class Note < Base
     def company
       Company.find(company_id)

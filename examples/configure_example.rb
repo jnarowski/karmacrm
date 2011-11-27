@@ -1,8 +1,8 @@
 $:.unshift File.join(File.expand_path("../..", __FILE__), "lib")
 
-require "karmacrm_client"
+require "karmacrm"
 
-KarmacrmClient::Base.config do |conf|
+Karmacrm::Base.config do |conf|
   conf.site = "http://localhost:3000"
   conf.prefix = "/api/v1/"
   conf.format = :json
@@ -10,4 +10,4 @@ KarmacrmClient::Base.config do |conf|
 end
 
 # Can be set directly too
-KarmacrmClient::Base.api_key = 'eJogN2yuam5YV-v2_l3f'
+Karmacrm::Base.api_key = 'eJogN2yuam5YV-v2_l3f'

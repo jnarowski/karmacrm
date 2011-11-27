@@ -1,4 +1,4 @@
-module KarmacrmClient
+module Karmacrm
   class User < Base
   end
 end
