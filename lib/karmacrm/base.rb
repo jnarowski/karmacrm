@@ -22,6 +22,7 @@ module Karmacrm
 
       def site=(site_url)
         self.prefix = "/api/v#{api_version}/"
+        self.include_root_in_json = true
         super(site_url)
       end
 
