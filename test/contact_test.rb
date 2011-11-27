@@ -7,7 +7,7 @@ module Karmacrm
       all = Contact.find(:all)
       first_name = "Test"
       last_name = "Contact"
-      contact = Contact.create(:first_name => first_name, :last_name => last_name)
+      contact = Contact.new(:first_name => first_name, :last_name => last_name)
       assert contact.save
 
       assert_equal all.length + 1, Contact.find(:all).length

@@ -5,8 +5,8 @@ require "karmacrm/version"
 Gem::Specification.new do |s|
   s.name        = "karmacrm"
   s.version     = Karmacrm::VERSION
-  s.authors     = ["Bosko Ivanisevic"]
-  s.email       = ["bosko.ivanisevic@gmail.com"]
+  s.authors     = ["John Paul Narowski"]
+  s.email       = ["jp@karmacrm.com"]
   s.homepage    = ""
   s.summary     = %q{KarmaCRM client library}
   s.description = %q{KarmaCRM API client library}
@@ -17,6 +17,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # specify any dependencies here
-  s.add_dependency "activeresource", "2.3.11"
+  s.add_dependency "activeresource", "2.3.12"
   s.add_dependency "rake", "0.8.7"
 end
