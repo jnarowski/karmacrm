@@ -1,4 +1,4 @@
 module Karmacrm
-  class Lead < Base
+  class Contact < Base
   end
 end
