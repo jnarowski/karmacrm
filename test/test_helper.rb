@@ -10,4 +10,3 @@ KarmacrmClient::Base.config do |config|
   config.api_key = test_cfg[:api_key]
   config.logger = Logger.new(STDOUT) if test_cfg[:verbose] == true
 end
-  
