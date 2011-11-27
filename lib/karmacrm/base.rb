@@ -12,8 +12,17 @@ module Karmacrm
         @@api_key ||= ""
       end
 
+      def api_version
+        @@api_version ||= "1"
+      end
+
       def format
         @@format ||= ActiveResource::Formats::JsonFormat
+      end
+
+      def site=(site_url)
+        self.prefix = "/api/v#{api_version}/"
+        super(site_url)
       end
 
       def config

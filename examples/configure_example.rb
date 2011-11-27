@@ -4,8 +4,6 @@ require "karmacrm"
 
 Karmacrm::Base.config do |conf|
   conf.site = "http://localhost:3000"
-  conf.prefix = "/api/v1/"
-  conf.format = :json
   conf.api_key = 'eJogN2yuam5YV-v2_l3f'
 end
 
