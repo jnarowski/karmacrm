@@ -1,5 +1,3 @@
-require "base"
-
 module KarmacrmClient
   class Note < Base
     def company
