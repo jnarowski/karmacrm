@@ -20,4 +20,5 @@ Gem::Specification.new do |s|
 
   # specify any dependencies here
   s.add_dependency "activeresource", "2.3.11"
+  s.add_dependency "rake", "0.8.7"
 end

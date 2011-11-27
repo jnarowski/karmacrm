@@ -35,6 +35,11 @@ module KarmacrmClient
         items = super(scope, options)
       end
     end
-    
+
+    def save
+      prefix_options[:api_key] = self.class.api_key
+      super
+    end
+
   end
 end
