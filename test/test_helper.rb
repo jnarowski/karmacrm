@@ -2,6 +2,8 @@ require "yaml"
 require "test/unit"
 require "karmacrm"
 
+raise "No configuration file. You must create test_config.yml" unless File.exist?("test_config.yml")
+
 test_cfg = YAML.load_file(File.join(File.expand_path("../", __FILE__), "test_config.yml"))
 Karmacrm::Base.config do |config|
   config.site = test_cfg[:site]
