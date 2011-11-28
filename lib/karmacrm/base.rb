@@ -40,7 +40,12 @@ module Karmacrm
       def find(*args)
         scope = args.slice!(0)
         options = args.slice!(0) || {}
-        options.merge!({:params => {:api_key => api_key}})
+
+        if options[:params].is_a? Hash
+          options[:params][:api_key] = api_key
+        else
+          options.merge!({:params => {:api_key => api_key}})
+        end
         
         items = super(scope, options)
       end
