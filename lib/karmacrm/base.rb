@@ -49,6 +49,12 @@ module Karmacrm
         
         items = super(scope, options)
       end
+
+      def delete(id, options = {})
+        options[:api_key] = api_key
+        super(id, options)
+      end
+
     end
 
     def save

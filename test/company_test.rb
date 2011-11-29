@@ -3,9 +3,6 @@ require "karmacrm/company"
 
 module Karmacrm
   class CompanyTest < Test::Unit::TestCase
-    def setup
-    end
-
     def test_create
       all_companies = Company.find(:all)
       company = Company.new(:name => 'Test company')
@@ -31,6 +28,14 @@ module Karmacrm
       company.name = "The other company"
       assert company.save
       assert_not_nil Company.find(:first, :params => { :name => "The other company" })
+    end
+
+    def test_delete
+      company = Company.new(:name => 'Company to delete')
+      company.save
+
+      Company.delete(company.id)
+      assert_nil Company.find(:first, :params => { :name => "Company to delete" })
     end
   end
 end
