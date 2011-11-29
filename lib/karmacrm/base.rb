@@ -2,6 +2,7 @@ require "active_resource"
 
 module Karmacrm
   class Base < ActiveResource::Base
+    IDENTITY_NAME = 'karmacrm'
 
     class << self
       def api_key=(api_key)
@@ -43,8 +44,9 @@ module Karmacrm
 
         if options[:params].is_a? Hash
           options[:params][:api_key] = api_key
+          options[:params][:client] = self::IDENTITY_NAME
         else
-          options.merge!({:params => {:api_key => api_key}})
+          options.merge!({:params => {:api_key => api_key, :client => self::IDENTITY_NAME}})
         end
         
         items = super(scope, options)
@@ -52,6 +54,7 @@ module Karmacrm
 
       def delete(id, options = {})
         options[:api_key] = api_key
+        options[:client] = self::IDENTITY_NAME
         super(id, options)
       end
 
@@ -59,8 +62,8 @@ module Karmacrm
 
     def save
       prefix_options[:api_key] = self.class.api_key
+      prefix_options[:client] = IDENTITY_NAME
       super
     end
-
   end
 end
