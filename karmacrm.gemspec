@@ -16,6 +16,10 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
+  s.extra_rdoc_files = [ "README.rdoc" ]
+  s.rdoc_options << '--title' << 'Karmacrm client' <<
+                       '--main' << 'README.rdoc'
+  
   # specify any dependencies here
   s.add_dependency "activeresource", "2.3.12"
   s.add_dependency "rake", "0.8.7"

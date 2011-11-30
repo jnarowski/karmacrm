@@ -1,0 +1,24 @@
+= Karmacrm
+
+Karmacrm is a gem that provides a set of classes to access KarmaCRM through API.
+
+== Installing
+
+Install it with
+
+ gem install karmacrm
+
+== Usage
+
+Configuration can be done through a block
+
+  Karmacrm::Base.config do |c|
+    c.site = "http://mysite.karmacrm.com"
+    c.api_key = <my_api_key>
+  end
+
+or directly as
+
+  Karmacrm::Base.site = "http://mysite.karmacrm.com"
+  Karmacrm::Base.api_key = <my_api_key>
+
