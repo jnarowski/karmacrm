@@ -1,6 +1,6 @@
 = Karmacrm
 
-Karmacrm is a gem that provides a set of classes to access KarmaCRM through API.
+Karmacrm is a gem that provides a set of classes to access KarmaCRM[http://www.karmacrm.com] through API.
 
 == Installing
 
